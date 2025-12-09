@@ -31,18 +31,18 @@ export default defineConfig(({ command }) => {
               return '[name].[ext]';
             }
             return 'assets/[name]-[hash][extname]';
-          },
-        },
+          }
+        }
       },
       outDir: '../dist',
-      emptyOutDir: true,
+      emptyOutDir: true
     },
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
       SortCss({
-        sort: 'mobile-first',
-      }),
-    ],
+        sort: 'mobile-first'
+      })
+    ]
   };
 });
